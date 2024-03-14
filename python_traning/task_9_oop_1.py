@@ -1,32 +1,26 @@
-class Input:
-    def __init__(self, loc, text):
-        self.loc = loc
+from task_9_checks import Checks
+class Input(Checks):
+    def __init__(self, text, loc):
         self.text = text
-search = Input("input#search")
-a = Input("input#a")
+        self.loc = loc
+search = Input("input#search", "input#search")
 print(search.loc)
-print(a.text)
-class Button:
-    def __init__(self, loc, text):
-        self.loc = loc
+class Button(Checks):
+    def __init__(self, text, loc):
         self.text = text
-b = Button("Button#b")
-c = Button("button#c")
-print(b.loc)
-print(c.text)
-class Title:
-    def __init__(self, loc, text):
         self.loc = loc
+click = Button("Button#click", "Title#date")
+print(click.loc)
+class Title(Checks):
+    def __init__(self, text, loc):
         self.text = text
-d = Title("Title#d")
-e = Title("Title#e")
-print(d.loc)
-print(e.text)
-class Link:
-    def __init__(self, loc, text):
         self.loc = loc
+date = Title("Title#date", "Title#date")
+print(date.loc)
+class Link(Checks):
+    def __init__(self, text, loc):
         self.text = text
-f = Link("Link#f")
-g = Link("Link#g")
-print(f.loc)
-print(g.text)
+        self.loc = loc
+url = Link("Link#url", "input#text")
+print(url.loc)
+
