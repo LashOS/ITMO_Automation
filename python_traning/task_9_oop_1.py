@@ -1,8 +1,9 @@
 from task_9_checks import Checks
 class Input(Checks):
-    def __init__(self, text, loc):
+    def __init__(self, text):
         self.text = text
-        self.loc = loc
+
+search = Input()
 search = Input("input#search", "input#search")
 print(search.loc)
 class Button(Checks):
