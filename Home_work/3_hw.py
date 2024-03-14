@@ -28,7 +28,7 @@ task_3(a = 6)
 
 def task_4(a, b, c):
     if a > 10 and b > 10 and c > 10:
-        print("yas")
+        print("yes")
     else:
         print("No")
 task_4(a = 10, b = 11, c = 12)
