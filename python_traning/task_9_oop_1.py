@@ -2,26 +2,28 @@ from task_9_checks import Checks
 class Input(Checks):
     def __init__(self, text):
         self.text = text
-
-search = Input()
-search = Input("input#search", "input#search")
+search = Checks("input#search")
+search1 = Input("input#search")
+print(search1.text)
 print(search.loc)
 class Button(Checks):
-    def __init__(self, text, loc):
+    def __init__(self, text):
         self.text = text
-        self.loc = loc
-click = Button("Button#click", "Title#date")
+click = Checks("Button#click")
+click1 = Button("Button#click")
 print(click.loc)
+print(click1.text)
 class Title(Checks):
-    def __init__(self, text, loc):
+    def __init__(self, text):
         self.text = text
-        self.loc = loc
-date = Title("Title#date", "Title#date")
+date = Checks("Title#date")
+date1 = Title("Title#date")
 print(date.loc)
+print(date1.text)
 class Link(Checks):
-    def __init__(self, text, loc):
+    def __init__(self, text):
         self.text = text
-        self.loc = loc
-url = Link("Link#url", "input#text")
+url = Checks("Link#url")
+url1 = Link("Link#url")
 print(url.loc)
-
+print(url1.text)
